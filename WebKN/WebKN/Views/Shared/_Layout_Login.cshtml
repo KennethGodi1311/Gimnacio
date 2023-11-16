@@ -1,71 +1,47 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-
 <head>
+    <title>Colorlib Fitnezz</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
-    <link href="~/template/vendors/feather/feather.css" rel="stylesheet" />
-    <link href="~/template/vendors/ti-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="~/template/vendors/css/vendor.bundle.base.css" rel="stylesheet">
-    <link href="~/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="~/template/vendors/ti-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="~/template/js/select.dataTables.min.css" rel="stylesheet">
-    <link href="~/template/css/vertical-layout-light/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="~/Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Template/css/animate.css">
+    <link rel="stylesheet" href="~/Template/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Template/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Template/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Template/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Template/css/style.css">
 </head>
 <body>
-    <div class="container-scroller">
 
-        @*HEADER*@
-        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="@Url.Action("Index","Login")"><img src="~/template/images/logo.svg" class="mr-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="@Url.Action("Index","Login")"><img src="~/template/images/logo-mini.svg" alt="logo" /></a>
+    <header role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="">Fitne<span>zz</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
             </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-
-            </div>
-
         </nav>
-        @*HEADER*@
+    </header>
 
-        <div class="container-fluid page-body-wrapper">
+    @RenderBody()
 
-            @*PANEL PRINCIPAL*@
-            <div class="main-panel" style="width: 100%;">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 grid-margin">
-                            @RenderBody()
-                        </div>
-                    </div>
-                </div>
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
 
-                @*FOOTER*@
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © @DateTime.Now.Year.  Derechos Reservados.</span>
-                    </div>
-                </footer>
-                @*FOOTER*@
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/js/popper.min.js"></script>
+    <script src="~/Template/js/bootstrap.min.js"></script>
+    <script src="~/Template/js/owl.carousel.min.js"></script>
+    <script src="~/Template/js/jquery.waypoints.min.js"></script>
 
-            </div>
-            @*PANEL PRINCIPAL*@
+    <script src="~/Template/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Template/js/magnific-popup-options.js"></script>
 
-        </div>
-    </div>
 
-    <script src="~/template/vendors/js/vendor.bundle.base.js"></script>
-    <script src="~/template/vendors/chart.js/Chart.min.js"></script>
-    <script src="~/template/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="~/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="~/template/js/dataTables.select.min.js"></script>
-    <script src="~/template/js/off-canvas.js"></script>
-    <script src="~/template/js/hoverable-collapse.js"></script>
-    <script src="~/template/js/template.js"></script>
-    <script src="~/template/js/settings.js"></script>
-    <script src="~/template/js/todolist.js"></script>
-    <script src="~/template/js/dashboard.js"></script>
-    <script src="~/template/js/Chart.roundedBarCharts.js"></script>
+    <script src="~/Template/js/main.js"></script>
 </body>
 </html>

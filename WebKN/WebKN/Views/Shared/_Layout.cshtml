@@ -1,139 +1,276 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-
 <head>
+    <title>Colorlib Fitnezz</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
-    <link href="~/template/vendors/feather/feather.css" rel="stylesheet" />
-    <link href="~/template/vendors/ti-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="~/template/vendors/css/vendor.bundle.base.css" rel="stylesheet">
-    <link href="~/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="~/template/vendors/ti-icons/css/themify-icons.css" rel="stylesheet">
-    <link href="~/template/js/select.dataTables.min.css" rel="stylesheet">
-    <link href="~/template/css/vertical-layout-light/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Template/css/animate.css">
+    <link rel="stylesheet" href="~/Template/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="~/Template/css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="~/Template/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Template/fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="~/Template/css/style.css">
 </head>
 <body>
-    <div class="container-scroller">
 
-        @*HEADER*@
-        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="@Url.Action("Index","Login")"><img src="~/template/images/logo.svg" class="mr-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="@Url.Action("Index","Login")"><img src="~/template/images/logo-mini.svg" alt="logo" /></a>
-            </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                    <span class="icon-menu"></span>
+    <header role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Fitne<span>zz</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+               
+</body>
 
-                <ul class="navbar-nav mr-lg-2">
-                    <li class="nav-item nav-search d-none d-lg-block">
-                        <div class="input-group">
-                            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                                <span class="input-group-text" id="search">
-                                    <i class="icon-search"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-                        </div>
-                    </li>
-                </ul>
 
-                <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="~/template/images/faces/face28.jpg" alt="profile" />
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
 
-                            <a class="dropdown-item" href="@Url.Action("IniciarSesion","Login")">
-                                <i class="ti-home text-primary"></i>
-                                Iniciar Sesión
-                            </a>
 
-                            <a class="dropdown-item">
-                                <i class="ti-settings text-primary"></i>
-                                Perfil
-                            </a>
-                            <a class="dropdown-item">
-                                <i class="ti-power-off text-primary"></i>
-                                Cerrar Sesión
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                    <span class="icon-menu"></span>
-                </button>
-            </div>
 
-        </nav>
-        @*HEADER*@
+<!-- boton de registro -->
 
-        <div class="container-fluid page-body-wrapper">
 
-            @*MENU LATERAL*@
-            <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <i class="icon-layout menu-icon"></i>
-                            <span class="menu-title">UI Elements</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
 
-                                <li class="nav-item">
-                                    @Html.ActionLink("About", "About", "Login", new { @class = "nav-link" })
-                                </li>
-                                <li class="nav-item">
-                                    @Html.ActionLink("Contact", "Contact", "Login", new { @class = "nav-link" })
-                                </li>
 
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            @*MENU LATERAL*@
+<div class="collapse navbar-collapse" id="navbarsExample05">
+    <ul class="navbar-nav mr-auto pl-lg-5 pl-0">
 
-            @*PANEL PRINCIPAL*@
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 grid-margin">
-                            @RenderBody()
-                        </div>
-                    </div>
+        <ul class="navbar-nav ml-auto">
+
+
+            <li class="nav-item cta-btn">
+                <a class="nav-link" href="@Url.Action("RegistrarCuenta","Login")">Registrate</a>
+            </li>
+        </ul>
+
+</div>
+
+
+
+<li class="nav-item">
+    <a class="nav-link" href="About.html">Acerca de</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+    <div class="dropdown-menu" aria-labelledby="dropdown04">
+        <a class="dropdown-item" href="services.html">fisicoculturista</a>
+        <a class="dropdown-item" href="services.html">pilato yoga</a>
+        <a class="dropdown-item" href="services.html">Vida saludable</a>
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="news.html">Nuevo</a>
+</li>
+
+
+
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item cta-btn">
+        <a class="nav-link" href="@Url.Action("IniciarSesion","login")">Iniciar sesión</a>
+    </li>
+</ul>
+
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item cta-btn">
+        <a class="nav-link" href="@Url.Action("NuestroHorario","Login")">Horarios</a>
+    </li>
+</ul>
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item cta-btn">
+        <a class="nav-link" href="@Url.Action("ClasesDestacadas","")">Clases</a>
+    </li>
+</ul>
+
+
+             </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url('../../template/img/slider-1.jpg');">
+
+        <div class="container">
+            <div class="row slider-text align-items-center justify-content-center">
+                <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1>La salud es riqueza</h1>
+                    <p class="mb-5">Es muy importante que el cliente preste atención al proceso adipiscente. Las conveniencias que obstaculiza, las necesidades, deben resolverse lo menos posible, y rechazando lo corrupto.</p>
+                    <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
                 </div>
-
-                @*FOOTER*@
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © @DateTime.Now.Year.  Derechos Reservados.</span>
-                    </div>
-                </footer>
-                @*FOOTER*@
-
             </div>
-            @*PANEL PRINCIPAL*@
+        </div>
 
+    </div>
+
+    <div class="slider-item" style="background-image: url('../../template/img/slider-2.jpg');">
+        <div class="container">
+            <div class="row slider-text align-items-center justify-content-center">
+                <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1>Únete a Fitnezz hoy mismo</h1>
+                    <p class="mb-5">Es muy importante que el cliente preste atención al proceso adipiscente. Las conveniencias que obstaculiza, las necesidades, deben resolverse lo menos posible, y rechazando lo corrupto..</p>
+                    <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- END slider -->
+
+@RenderBody()
+
+
+<section class="section element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>Clases destacadas</h2>
+                    <span class="back-text">Las clases</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="~/template/vendors/js/vendor.bundle.base.js"></script>
-    <script src="~/template/vendors/chart.js/Chart.min.js"></script>
-    <script src="~/template/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="~/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="~/template/js/dataTables.select.min.js"></script>
-    <script src="~/template/js/off-canvas.js"></script>
-    <script src="~/template/js/hoverable-collapse.js"></script>
-    <script src="~/template/js/template.js"></script>
-    <script src="~/template/js/settings.js"></script>
-    <script src="~/template/js/todolist.js"></script>
-    <script src="~/template/js/dashboard.js"></script>
-    <script src="~/template/js/Chart.roundedBarCharts.js"></script>
+
+</section> <!-- .section -->
+
+<section class="section bg-light element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>Nuestro Horario</h2>
+                    <span class="back-text-dark">Horario</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section> <!-- .section -->
+
+<section class="section element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>Entrenadores expertos</h2>
+                    <span class="back-text">Nuestros entrenadores</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> <!-- .section -->
+
+<section class="section element-animate">
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>Blog</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section> <!-- .section -->
+
+
+
+
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-4 mb-5">
+                <h3>Sobre nosotros</h3>
+                <p class="mb-5">La empresa en sí es una empresa muy exitosa. Los placeres y dolores de las caricias resultan de los placeres que se disciernen en todos los sentidos de los cuales se obtiene lo menos conveniente.</p>
+                <ul class="list-unstyled footer-link d-flex footer-social">
+                    <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-5 mb-5">
+                <h3>Datos de contacto</h3>
+                <ul class="list-unstyled footer-link">
+                    <li class="d-block">
+                        <span class="d-block">DIRECCIÓN:</span>
+                        <span class="text-white">34 Nombre de la calle, nombre de la ciudad aquí, Estados Unidos</span>
+                    </li>
+                    <li class="d-block"><span class="d-block">Teléfono:</span><span class="text-white">+1 242 4942 290</span></li>
+                    <li class="d-block"><span class="d-block">Correo electrónico:</span><span class="text-white">info@yourdomain.com</span></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-5">
+                <h3>enlaces rápidos</h3>
+                <ul class="enlace de pie de página sin estilo de lista">
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Condiciones de uso</a></li>
+                    <li><a href="#">Descargos de responsabilidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-md-center text-left">
+                <p>
+                    &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta plantilla está hecha con <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> <br> Imágenes de demostración Unsplash
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END footer -->
+<!-- loader -->
+<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+
+<script src="~/Template/js/jquery-3.2.1.min.js"></script>
+<script src="~/Template/js/popper.min.js"></script>
+<script src="~/Template/js/bootstrap.min.js"></script>
+<script src="~/Template/js/owl.carousel.min.js"></script>
+<script src="~/Template/js/jquery.waypoints.min.js"></script>
+
+<script src="~/Template/js/jquery.magnific-popup.min.js"></script>
+<script src="~/Template/js/magnific-popup-options.js"></script>
+
+
+<script src="~/Template/js/main.js"></script>
 </body>
 </html>
+
+

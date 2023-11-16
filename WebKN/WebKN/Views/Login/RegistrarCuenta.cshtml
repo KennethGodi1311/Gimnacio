@@ -5,6 +5,30 @@
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
 
+<section class="home-slider-loop-false  inner-page owl-carousel" style="margin-bottom: -100px;">
+    <div class="slider-item" style="background-image: url('../../template/img/slider-1.jpg');">
+
+
+
+
+        <div class="container">
+            <div class="row slider-text align-items-center justify-content-center">
+                <div class="col-md-8 text-center col-sm-12 element-animate">
+
+
+
+
+
+                    <h1>Registrarse </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
 <br />
 <br />
 
@@ -13,7 +37,7 @@
         <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                 <div class="brand-logo">
-                    <img src="~/template/images/logo.svg" alt="logo">
+                    <h1 class="h2">Conviertete en miembro</h1>
                 </div>
 
                 @if (ViewBag.MensajeUsuario != null)
@@ -26,10 +50,13 @@
                 @using (Html.BeginForm("RegistrarCuenta", "Login", FormMethod.Post, new { @class = "pt-3" }))
                 {
                     <div class="form-group">
-                        @Html.TextBoxFor(m => m.Identificacion, new { @class = "form-control form-control-lg", @placeholder = "Identificación", @type = "text" })
+                        @Html.TextBoxFor(m => m.Identificacion, new { @class = "form-control form-control-lg", @placeholder = "Identificación",
+                       @type = "text",
+                       onkeyup = "ConsultarNombre();"
+                   })
                     </div>
                     <div class="form-group">
-                        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control form-control-lg", @placeholder = "Nombre", @type = "text" })
+                        @Html.TextBoxFor(m => m.Nombre, new { @readOnly = "readOnly", @style="background-color:#eeeeee", @class = "form-control form-control-lg", @placeholder = "Nombre", @type = "text" })
                     </div>
                     <div class="form-group">
                         @Html.TextBoxFor(m => m.Correo, new { @class = "form-control form-control-lg", @placeholder = "Correo Electrónico", @type = "email" })
@@ -49,3 +76,5 @@
         </div>
     </div>
 </div>
+
+<script src="~/FuncionesSite/ConsultaNombres.js"></script>

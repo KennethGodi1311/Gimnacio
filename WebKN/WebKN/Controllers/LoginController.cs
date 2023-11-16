@@ -7,11 +7,18 @@ namespace WebKN.Controllers
     public class LoginController : Controller
     {
         UsuarioModel modelUsuario = new UsuarioModel();
-
+       
         [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult CerrarSesion()
+        { 
+            Session.Clear();
+            return RedirectToAction("IniciarSesion", "Login");
         }
 
 
@@ -28,6 +35,8 @@ namespace WebKN.Controllers
 
             if (respuesta != null)
             {
+                Session["ConUsuario"] = respuesta.ConUsuario;
+                Session["Nombre"] = respuesta.Nombre;
                 return RedirectToAction("Index", "Login");
             }
             else
@@ -38,6 +47,18 @@ namespace WebKN.Controllers
         }
 
 
+        public ActionResult NuestroHorario()
+        {
+            return View();
+        }
+
+        public ActionResult ClasesDestacadas()
+        {
+            return View();
+        }
+
+
+
         [HttpGet]
         public ActionResult RegistrarCuenta()
         {
@@ -46,11 +67,8 @@ namespace WebKN.Controllers
 
         [HttpPost]
         public ActionResult RegistrarCuenta(UsuarioEnt entidad)
-        {
-            entidad.Estado = true;
-            entidad.Direccion = string.Empty;
-            
-            string respuesta = modelUsuario.RegistrarCuenta(entidad);
+        {           
+            var respuesta = modelUsuario.RegistrarCuenta(entidad);
 
             if (respuesta == "OK")
             {

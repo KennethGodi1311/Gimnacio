@@ -1,0 +1,83 @@
+@{
+    ViewBag.Title = "ClasesDestacadas";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<section class="home-slider-loop-false  inner-page owl-carousel" style="margin-bottom: -100px;">
+    <div class="slider-item" style="background-image: url('../../template/img/slider-1.jpg');">
+
+        <div class="container">
+
+
+
+            <div class="row slider-text align-items-center justify-content-center">
+                <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1> Clases Destacadas</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>Clases</h2>
+                    <span class="back-text">Las clases</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="owl-carousel centernonloop">
+        <a href="#" class="item-class">
+            <div class="text">
+                <p class="class-price">$30.99</p>
+                <h2 class="class-heading">Nombre de la clase de acondicionamiento físico aquí</h2>
+            </div>
+            <img src="~/Template/img/img_1_square.jpg" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-class">
+            <div class="text">
+                <p class="class-price">$30.99</p>
+                <h2 class="class-heading">Nombre de la clase de acondicionamiento físico aquí</h2>
+            </div>
+            <img src="~/Template/img/img_2_square.jpg" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-class">
+            <div class="text">
+                <p class="class-price">$30.99</p>
+                <h2 class="class-heading">Nombre de la clase de acondicionamiento físico aquí</h2>
+            </div>
+            <img src="~/Template/img/img_3_square.jpg" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-class">
+            <div class="text">
+                <p class="class-price">$30.99</p>
+                <h2 class="class-heading">Nombre de la clase de acondicionamiento físico aquí</h2>
+            </div>
+            <img src="~/Template/img/img_4_square.jpg" alt="" class="img-fluid">
+        </a>
+    </div>
+</section> <!-- .section -->
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item cta-btn">
+        <a class="nav-link" href="@Url.Action("contraseña","Home")">Olvide la contraseña</a>
+    </li>
+</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item cta-btn">
+            <a class="nav-link" href="@Url.Action("Registrarse","Home")">Registrarse</a>
+        </li>
+
+
+
+    </ul>
+   
