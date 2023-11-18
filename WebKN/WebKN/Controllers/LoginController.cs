@@ -46,16 +46,30 @@ namespace WebKN.Controllers
             }
         }
 
-
+        [HttpGet]
         public ActionResult NuestroHorario()
         {
             return View();
         }
-
-        public ActionResult ClasesDestacadas()
+        
+        [HttpGet]
+        public ActionResult SeccionesPersonalizadas()
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Acerca()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Contac()
+        {
+            return View();
+        }
+
 
 
 
