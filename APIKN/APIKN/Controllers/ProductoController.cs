@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace APIKN.Controllers
 {
@@ -19,15 +23,29 @@ namespace APIKN.Controllers
 
         [HttpPost]
         [Route("RegistrarProducto")]
-        public string RegistrarProducto(TProducto tProducto)
+        public long RegistrarProducto(TProducto tProducto)
         {
             using (var context = new BDKNEntities())
             {
                 context.TProducto.Add(tProducto);
                 context.SaveChanges();
+                return tProducto.ConProducto;
+            }
+        }
+
+        [HttpPut]
+        [Route("ActualizarRutaProducto")]
+        public string ActualizarRutaProducto(TProducto tProducto)
+        {
+            using (var context = new BDKNEntities())
+            {
+                var datos = context.TProducto.Where(x => x.ConProducto == tProducto.ConProducto).FirstOrDefault();
+                datos.Imagen = tProducto.Imagen;
+                context.SaveChanges();
                 return "OK";
             }
         }
+
 
         /*
        
@@ -44,43 +62,6 @@ namespace APIKN.Controllers
 
             return Ok(tProducto);
         }
-
-        // PUT: api/Producto/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutTProducto(long id, TProducto tProducto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != tProducto.ConProducto)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(tProducto).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TProductoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        
 
         // DELETE: api/Producto/5
         [ResponseType(typeof(TProducto))]

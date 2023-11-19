@@ -98,7 +98,6 @@ namespace APIKN.Controllers
             }
         }
 
-
         [HttpPut]
         [Route("ActualizarEstadoUsuario")]
         public string ActualizarEstadoUsuario(UsuarioEnt entidad)
@@ -109,7 +108,6 @@ namespace APIKN.Controllers
                 return "OK";
             }
         }
-
 
     }
 }

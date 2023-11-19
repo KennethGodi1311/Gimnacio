@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-    <title>Colorlib Fitnezz</title>
+    <title>Colorlib GYM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -24,19 +24,19 @@
 
     <header role="banner">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Fitne<span>zz</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="@Url.Action("Index","Login")"><img src="~/template/img/logo.png"></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
                 </button>
-               
+            </div>
 </body>
 
 
 
-
-
-<!-- boton de registro -->
+<!-- boton de registrar cuenta -->
 
 
 
@@ -62,48 +62,49 @@
     </li>
 </ul>
 
-<li class="nav-item dropdown">
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown cta-btn">
     <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
     <div class="dropdown-menu" aria-labelledby="dropdown04">
-        <a class="dropdown-item" href="services.html">fisicoculturista</a>
-        <a class="dropdown-item" href="services.html">pilato yoga</a>
-        <a class="dropdown-item" href="services.html">Vida saludable</a>
+        <a class="dropdown-item" href="@Url.Action("IniciarSesion","login")">fisicoculturista</a>
+        <a class="dropdown-item" href="@Url.Action("IniciarSesion","login")">pilato yoga</a>
+        <a class="dropdown-item" href="@Url.Action("IniciarSesion","login")">Vida saludable</a>
     </div>
 </li>
 
 
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item cta-btn">
-        <a class="nav-link" href="@Url.Action("Contac","login")">Contac</a>
-    </li>
-</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item cta-btn">
+            <a class="nav-link" href="@Url.Action("Contac","login")">Contac</a>
+        </li>
+    </ul>
 
 
 
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item cta-btn">
-        <a class="nav-link" href="@Url.Action("IniciarSesion","login")">Iniciar sesión</a>
-    </li>
-</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item cta-btn">
+            <a class="nav-link" href="@Url.Action("IniciarSesion","login")">Iniciar sesión</a>
+        </li>
+    </ul>
 
 
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item cta-btn">
-        <a class="nav-link" href="@Url.Action("NuestroHorario","Login")">Horarios</a>
-    </li>
-</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item cta-btn">
+            <a class="nav-link" href="@Url.Action("NuestroHorario","Login")">Horarios</a>
+        </li>
+    </ul>
 
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item cta-btn">
-        <a class="nav-link" href="@Url.Action("SeccionesPersonalizadas","")">Secciones</a>
-    </li>
-</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item cta-btn">
+            <a class="nav-link" href="@Url.Action("SeccionesPersonalizadas","")">Secciones</a>
+        </li>
+    </ul>
 
 
-             </div>
-        </div>
+    </div>
+    </div>
     </nav>
-</header>
+    </header>
 
 
 
@@ -111,172 +112,172 @@
 
 
 
-<section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image: url('../../template/img/slider-1.jpg');">
+    <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url('../../template/img/hero-1.jpg');">
 
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>Que estar en forma no sea un impedimento</h1>
+                        <p class="mb-5">Es muy importante para nosotros que el cliente preste atención a su proceso de rutinas diciplinadas. que los obstaculos no sean un impedimento para las necesidades.</p>
+                        <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slider-item" style="background-image: url('../../template/img/hero-2.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>Únete a GYM hoy mismo y forma parte de nosotros</h1>
+                        <p class="mb-5">Es muy importante para nosotros que el cliente preste atención al proceso y no pierda su disciplina, recuerda que el trabajo duro y el esfuerzo de voluntad traera los resultados que quieres..</p>
+                        <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- END slider -->
+
+    @RenderBody()
+
+
+    <section class="section element-animate">
+
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>SeccionesPersonalizadas</h2>
+                        <span class="back-text">Secciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section> <!-- .section -->
+
+    <section class="section bg-light element-animate">
+
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>Nuestro Horario</h2>
+                        <span class="back-text-dark">Horario</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section> <!-- .section -->
+
+    <section class="section element-animate">
+
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>Entrenadores expertos</h2>
+                        <span class="back-text">Nuestros entrenadores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- .section -->
+
+    <section class="section element-animate">
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>Blog</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section> <!-- .section -->
+
+
+
+
+
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-                <div class="col-md-8 text-center col-sm-12 element-animate">
-                    <h1>La salud es riqueza</h1>
-                    <p class="mb-5">Es muy importante que el cliente preste atención al proceso adipiscente. Las conveniencias que obstaculiza, las necesidades, deben resolverse lo menos posible, y rechazando lo corrupto.</p>
-                    <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
+            <div class="row mb-5">
+                <div class="col-md-4 mb-5">
+                    <h3>Sobre nosotros</h3>
+                    <p class="mb-5">La empresa en sí es una empresa muy exitosa. Los placeres y dolores de las caricias resultan de los placeres que se disciernen en todos los sentidos de los cuales se obtiene lo menos conveniente.</p>
+                    <ul class="list-unstyled footer-link d-flex footer-social">
+                        <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-5 mb-5">
+                    <h3>Datos de contacto</h3>
+                    <ul class="list-unstyled footer-link">
+                        <li class="d-block">
+                            <span class="d-block">DIRECCIÓN:</span>
+                            <span class="text-white">34 Nombre de la calle, nombre de la ciudad aquí, Estados Unidos</span>
+                        </li>
+                        <li class="d-block"><span class="d-block">Teléfono:</span><span class="text-white">+1 242 4942 290</span></li>
+                        <li class="d-block"><span class="d-block">Correo electrónico:</span><span class="text-white">info@yourdomain.com</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h3>enlaces rápidos</h3>
+                    <ul class="enlace de pie de página sin estilo de lista">
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Condiciones de uso</a></li>
+                        <li><a href="#">Descargos de responsabilidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+
                 </div>
             </div>
-        </div>
-
-    </div>
-
-    <div class="slider-item" style="background-image: url('../../template/img/slider-2.jpg');">
-        <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-                <div class="col-md-8 text-center col-sm-12 element-animate">
-                    <h1>Únete a Fitnezz hoy mismo</h1>
-                    <p class="mb-5">Es muy importante que el cliente preste atención al proceso adipiscente. Las conveniencias que obstaculiza, las necesidades, deben resolverse lo menos posible, y rechazando lo corrupto..</p>
-                    <p><a href="#" class="btn btn-white btn-outline-white">Comenzar</a> <a href="#" class="btn btn-link btn-white">Descargar</a></p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<!-- END slider -->
-
-@RenderBody()
-
-
-<section class="section element-animate">
-
-    <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 text-center heading-wrap">
-                    <h2>SeccionesPersonalizadas</h2>
-                    <span class="back-text">Secciones</span>
+                <div class="col-12 text-md-center text-left">
+                    <p>
+                        &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta plantilla está hecha con <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> <br> Imágenes de demostración Unsplash
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+    <!-- END footer -->
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/js/popper.min.js"></script>
+    <script src="~/Template/js/bootstrap.min.js"></script>
+    <script src="~/Template/js/owl.carousel.min.js"></script>
+    <script src="~/Template/js/jquery.waypoints.min.js"></script>
+
+    <script src="~/Template/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Template/js/magnific-popup-options.js"></script>
 
 
-</section> <!-- .section -->
-
-<section class="section bg-light element-animate">
-
-    <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center heading-wrap">
-                    <h2>Nuestro Horario</h2>
-                    <span class="back-text-dark">Horario</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</section> <!-- .section -->
-
-<section class="section element-animate">
-
-    <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center heading-wrap">
-                    <h2>Entrenadores expertos</h2>
-                    <span class="back-text">Nuestros entrenadores</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section> <!-- .section -->
-
-<section class="section element-animate">
-    <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center heading-wrap">
-                    <h2>Blog</h2>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</section> <!-- .section -->
-
-
-
-
-
-<footer class="site-footer" role="contentinfo">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md-4 mb-5">
-                <h3>Sobre nosotros</h3>
-                <p class="mb-5">La empresa en sí es una empresa muy exitosa. Los placeres y dolores de las caricias resultan de los placeres que se disciernen en todos los sentidos de los cuales se obtiene lo menos conveniente.</p>
-                <ul class="list-unstyled footer-link d-flex footer-social">
-                    <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
-                    <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
-                    <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
-                    <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
-                </ul>
-
-            </div>
-            <div class="col-md-5 mb-5">
-                <h3>Datos de contacto</h3>
-                <ul class="list-unstyled footer-link">
-                    <li class="d-block">
-                        <span class="d-block">DIRECCIÓN:</span>
-                        <span class="text-white">34 Nombre de la calle, nombre de la ciudad aquí, Estados Unidos</span>
-                    </li>
-                    <li class="d-block"><span class="d-block">Teléfono:</span><span class="text-white">+1 242 4942 290</span></li>
-                    <li class="d-block"><span class="d-block">Correo electrónico:</span><span class="text-white">info@yourdomain.com</span></li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-5">
-                <h3>enlaces rápidos</h3>
-                <ul class="enlace de pie de página sin estilo de lista">
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Condiciones de uso</a></li>
-                    <li><a href="#">Descargos de responsabilidad</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-md-center text-left">
-                <p>
-                    &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta plantilla está hecha con <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> <br> Imágenes de demostración Unsplash
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- END footer -->
-<!-- loader -->
-<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
-
-<script src="~/Template/js/jquery-3.2.1.min.js"></script>
-<script src="~/Template/js/popper.min.js"></script>
-<script src="~/Template/js/bootstrap.min.js"></script>
-<script src="~/Template/js/owl.carousel.min.js"></script>
-<script src="~/Template/js/jquery.waypoints.min.js"></script>
-
-<script src="~/Template/js/jquery.magnific-popup.min.js"></script>
-<script src="~/Template/js/magnific-popup-options.js"></script>
-
-
-<script src="~/Template/js/main.js"></script>
-</body>
+    <script src="~/Template/js/main.js"></script>
+    </body>
 </html>
 
 

@@ -18,13 +18,15 @@
 
     <header role="banner">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="">Fitne<span>zz</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="@Url.Action("Index","Login")"><img src="~/template/img/logo.png"></a>
             </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+
         </nav>
     </header>
 
