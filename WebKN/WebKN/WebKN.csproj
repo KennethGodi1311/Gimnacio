@@ -237,6 +237,11 @@
     <Content Include="Template\img\img_3_square.jpg" />
     <Content Include="Template\img\img_4.jpg" />
     <Content Include="Template\img\img_4_square.jpg" />
+    <Content Include="Template\img\latest-1.jpg" />
+    <Content Include="Template\img\latest-2.jpg" />
+    <Content Include="Template\img\latest-3.jpg" />
+    <Content Include="Template\img\latest-4.jpg" />
+    <Content Include="Template\img\latest-5.jpg" />
     <Content Include="Template\img\logo.png" />
     <Content Include="Template\img\person_1.jpg" />
     <Content Include="Template\img\person_2.jpg" />
@@ -245,6 +250,7 @@
     <Content Include="Template\img\sidebar-banner.jpg" />
     <Content Include="Template\img\slider-1.jpg" />
     <Content Include="Template\img\slider-2.jpg" />
+    <Content Include="Template\img\trainer-profile.jpg" />
     <Content Include="Template\img\work_thumb_1.jpg" />
     <Content Include="Template\js\bootstrap.min.js" />
     <Content Include="Template\js\jquery-3.2.1.min.js" />
@@ -285,7 +291,7 @@
     <Content Include="Template\fonts\ionicons\fonts\ionicons.ttf" />
     <Content Include="Template\fonts\ionicons\fonts\ionicons.woff" />
     <Content Include="Views\Login\SeccionesPersonalizadas.cshtml" />
-    <Content Include="Views\Login\NuestroHorario.cshtml" />
+    <Content Include="Views\Login\Membresias.cshtml" />
     <Content Include="Views\Login\Acerca.cshtml" />
     <Content Include="Views\Shared\Acerca.cshtml" />
     <Content Include="Views\Login\Contac.cshtml" />

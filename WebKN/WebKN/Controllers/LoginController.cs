@@ -47,7 +47,7 @@ namespace WebKN.Controllers
         }
 
         [HttpGet]
-        public ActionResult NuestroHorario()
+        public ActionResult Membresias()
         {
             return View();
         }
