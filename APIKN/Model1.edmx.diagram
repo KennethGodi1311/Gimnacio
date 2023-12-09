@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cb983c529ec94b868a5db9efce57a890" Name="Diagram1">
+        <EntityTypeShape EntityType="DBGYMModel.TCarrito" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TComentario" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TDetalle" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TMaestro" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TProducto" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TProvincia" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TRol" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBGYMModel.TUsuario" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="DBGYMModel.FK_TCarrito_TProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TCarrito_TUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TDetalle_TMaestro" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TDetalle_TProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TMaestro_TMaestro" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TUsuario_TProvincia" ManuallyRouted="false" />
+        <AssociationConnector Association="DBGYMModel.FK_TUsuario_TRol" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

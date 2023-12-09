@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using WebKN.Entities;
 using WebKN.Models;
 
@@ -7,18 +8,21 @@ namespace WebKN.Controllers
     public class LoginController : Controller
     {
         UsuarioModel modelUsuario = new UsuarioModel();
-       
+        ProductoModel modelProducto = new ProductoModel();
+        CarritoModel modelCarrito = new CarritoModel();
+
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            var datos = modelProducto.ConsultaProductos().Where(x => x.Estado == true && x.Cantidad > 0);
+            return View(datos);
         }
 
         [HttpGet]
         public ActionResult CerrarSesion()
-        { 
+        {
             Session.Clear();
-            return RedirectToAction("IniciarSesion", "Login");
+            return RedirectToAction("Index", "Login");
         }
 
 
@@ -37,6 +41,12 @@ namespace WebKN.Controllers
             {
                 Session["ConUsuario"] = respuesta.ConUsuario;
                 Session["Nombre"] = respuesta.Nombre;
+                Session["Rol"] = respuesta.DescripcionRol;
+
+                var datos = modelCarrito.ConsultarCarrito(respuesta.ConUsuario);
+                Session["Cant"] = datos.Count();
+                Session["SubT"] = datos.AsEnumerable().Sum(x => x.Precio);
+
                 return RedirectToAction("Index", "Login");
             }
             else
@@ -46,11 +56,7 @@ namespace WebKN.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult Membresias()
-        {
-            return View();
-        }
+
         
         [HttpGet]
         public ActionResult SeccionesPersonalizadas()
@@ -65,7 +71,7 @@ namespace WebKN.Controllers
         }
 
         [HttpGet]
-        public ActionResult Contac()
+        public ActionResult Comentario()
         {
             return View();
         }
@@ -81,8 +87,8 @@ namespace WebKN.Controllers
 
         [HttpPost]
         public ActionResult RegistrarCuenta(UsuarioEnt entidad)
-        {           
-            var respuesta = modelUsuario.RegistrarCuenta(entidad);
+        {
+            string respuesta = modelUsuario.RegistrarCuenta(entidad);
 
             if (respuesta == "OK")
             {
@@ -90,9 +96,9 @@ namespace WebKN.Controllers
             }
             else
             {
-                ViewBag.MensajeUsuario = "No se ha podido registrar su información";
+                ViewBag.MensajeUsuario = "Cuenta con exito";
                 return View();
-            }            
+            }
         }
 
 
@@ -113,7 +119,7 @@ namespace WebKN.Controllers
             }
             else
             {
-                ViewBag.MensajeUsuario = "No se ha podido recuperar su información";
+                ViewBag.MensajeUsuario = "Correo enviado";
                 return View();
             }
         }

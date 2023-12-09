@@ -15,43 +15,60 @@
             </div>
             <br>
 
-            <table id="tableShow" class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Estado</th>
-                        <th>Vista Previa</th>
-                        <th>Cambiar Estado</th>
-                        <th>Actualizar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@item.Nombre</td>
-                            <td>@item.Descripcion</td>
-                            <td>@item.Cantidad</td>
-                            <td>@item.Precio</td>
-                            @if (item.Estado)
-                            {
-                                <td>Activo</td>
-                            }
-                            else
-                            {
-                                <td>Inactivo</td>
-                            }
-                            <td style="text-align:center"><img src="@item.Imagen" style="width:125px; height:125px"></td>
+            @if (Model.Count() > 0)
+            {
 
-                            <td></td>
-                            <td></td>
+                <table id="tableShow" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Vista Previa</th>
+                            <th>Cambiar Estado</th>
+                            <th>Actualizar</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Nombre</td>
+                                <td>@item.Descripcion</td>
+                                <td>@item.Cantidad</td>
+                                <td>@item.Precio</td>
+                                @if (item.Estado)
+                                {
+                                    <td>Activo</td>
+                                }
+                                else
+                                {
+                                    <td>Inactivo</td>
+                                }
+                                <td style="text-align:center"><img src="@item.Imagen" style="width:125px; height:125px; border-radius:0px;"></td>
+
+                                <td style="text-align:center">
+                                    <a href="@Url.Action("ActualizarEstadoProducto", "Producto", new { q = item.ConProducto })"><i class="fa fa-exchange fa-lg"></i></a>
+                                </td>
+
+                                <td style="text-align:center">
+                                    <a href="@Url.Action("ActualizarProducto", "Producto", new { q = item.ConProducto })"><i class="fa fa-tag fa-lg"></i></a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            }
+            else
+            {
+                <div class="col-12 alert alert-info" role="alert" style="text-align: center; margin-top: 5%;">
+                    No hay productos registrados en este momento
+                </div>
+            }
 
         </div>
     </div>

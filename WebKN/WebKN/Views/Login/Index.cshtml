@@ -5,3 +5,75 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="row">
+
+    @if (Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="@item.Imagen" width="150" height="150">
+                        <br /><br />
+                        <h5 class="card-title">@item.Nombre</h5>
+                        <p class="card-text">@item.Descripcion</p>
+                        <p class="card-text">Unidades: @item.Cantidad - ¢ @item.Precio.ToString("N2")</p>
+                        @if (Session["ConUsuario"] != null)
+                        {
+                            <div class="row">
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-4" style="text-align:right!important">
+                                    <input id=prd-@item.ConProducto type="number" class="form-control">
+                                </div>
+                                <div class="col-4" style="text-align:left">
+                                    <a onclick="RegistrarProducto(@item.ConProducto, @item.Cantidad)" class="btn btn-info"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
+    else
+    {
+        <div class="col-12 alert alert-info" role="alert" style="text-align: center; margin-top: 5%;">
+            No hay productos registrados en este momento
+        </div>
+    }
+
+</div>
+
+<script>
+
+  function RegistrarProducto(conProducto, disponible) {
+    let cantidad = $("#prd-" + conProducto).val();
+
+      if (cantidad > disponible) {
+
+          alert("Su solicitud supera la cantidad de unidades disponibles");
+
+      }
+      else {
+
+            $.ajax({
+            url: '/Carrito/RegistrarCarrito',
+            type: "GET",
+            data:
+            {
+              "cantidad": cantidad,
+              "conProducto": conProducto
+            },
+            success: function (data) {
+               window.location.href = '@Url.Action("Index", "Login")';
+            }
+        });
+
+      }
+  }
+
+</script>

@@ -18,33 +18,33 @@
             }
 
             @using (Html.BeginForm("PerfilUsuario", "Usuario", FormMethod.Post, new { @class = "pt-3" }))
-            { 
-                    @Html.HiddenFor(m => m.ConUsuario)
+            {
+                @Html.HiddenFor(m => m.ConUsuario)
 
-                    <div class="form-group">
-                        <label for="exampleInputName1">Identificación</label>
-                        @Html.TextBoxFor(m => m.Identificacion, new
-                        {
-                            @class = "form-control form-control-lg",
-                            @placeholder = "Identificación",
-                       @type = "text",
-                       onkeyup = "ConsultarNombre();"
-                   })
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail3">Nombre</label>
-                        @Html.TextBoxFor(m => m.Nombre, new { @readOnly = "readOnly", @style = "background-color:#eeeeee", @class = "form-control form-control-lg", @placeholder = "Nombre", @type = "text" })
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword4">Correo Electrónico</label>
-                        @Html.TextBoxFor(m => m.Correo, new { @class = "form-control form-control-lg", @placeholder = "Correo Electrónico", @type = "email" })
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleSelectGender">Dirección</label>
-                        @Html.DropDownListFor(m => m.ConProvincia, ViewBag.Direcciones as List<SelectListItem>, new { @class = "form-control form-control-lg" })
-                    </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Identificación</label>
+                    @Html.TextBoxFor(m => m.Identificacion, new
+                    {
+                        @class = "form-control form-control-lg",
+                        @placeholder = "Identificación",
+                        @type = "text",
+                        onkeyup = "ConsultarNombre();"
+                    })
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Nombre</label>
+                    @Html.TextBoxFor(m => m.Nombre, new { @readOnly = "readOnly", @style = "background-color:#eeeeee", @class = "form-control form-control-lg", @placeholder = "Nombre", @type = "text" })
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Correo Electrónico</label>
+                    @Html.TextBoxFor(m => m.Correo, new { @class = "form-control form-control-lg", @placeholder = "Correo Electrónico", @type = "email" })
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelectGender">Dirección</label>
+                    @Html.DropDownListFor(m => m.ConProvincia, ViewBag.Direcciones as List<SelectListItem>, new { @class = "form-control form-control-lg" })
+                </div>
 
-                    <button type="submit" class="btn btn-primary mr-2">Procesar</button>
+                <button type="submit" class="btn btn-primary mr-2">Procesar</button>
             }
         </div>
     </div>

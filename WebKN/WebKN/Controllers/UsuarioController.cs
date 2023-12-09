@@ -8,6 +8,7 @@ using WebKN.Models;
 
 namespace WebKN.Controllers
 {
+
     public class UsuarioController : Controller
     {
         UsuarioModel modelUsuario = new UsuarioModel();
@@ -36,7 +37,7 @@ namespace WebKN.Controllers
             {
                 ViewBag.MensajeUsuario = "No se ha podido cambiar el estado del usuario";
                 return View();
-            }            
+            }
         }
 
 
@@ -91,7 +92,7 @@ namespace WebKN.Controllers
                 return View();
             }
         }
-        
+
 
     }
 }

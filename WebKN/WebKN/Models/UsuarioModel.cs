@@ -19,13 +19,13 @@ namespace WebKN.Models
             PUT     = Updates   = Parámetros viajan en un Body al API 
         */
 
-        public string rutaServidor = ConfigurationManager.AppSettings["RutaApi"];
+        public string rutaServidor = ConfigurationManager.AppSettings["https://localhost:44337/RutaApi"];
 
         public UsuarioEnt IniciarSesion(UsuarioEnt entidad)
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "IniciarSesion";
+                var urlApi = rutaServidor + "https://localhost:44337/IniciarSesion";
                 var jsonData = JsonContent.Create(entidad);
                 var res = client.PostAsync(urlApi, jsonData).Result;
                 return res.Content.ReadFromJsonAsync<UsuarioEnt>().Result;
@@ -36,7 +36,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "RegistrarCuenta";
+                var urlApi = rutaServidor + "https://localhost:44337/RegistrarCuenta";
                 var jsonData = JsonContent.Create(entidad);
                 var res = client.PostAsync(urlApi, jsonData).Result;
                 return res.Content.ReadFromJsonAsync<string>().Result;
@@ -47,7 +47,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "RecuperarCuenta?Identificacion=" + entidad.Identificacion;
+                var urlApi ="https://localhost:44337/RecuperarCuenta?Identificacion=" + entidad.Identificacion;
                 var res = client.GetAsync(urlApi).Result;
                 return res.Content.ReadFromJsonAsync<string>().Result;
             }
@@ -57,7 +57,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "ConsultarProvincias";
+                var urlApi = rutaServidor + "https://localhost:44337/ConsultarProvincias";
                 var res = client.GetAsync(urlApi).Result;
                 return res.Content.ReadFromJsonAsync<List<SelectListItem>>().Result;
             }
@@ -67,7 +67,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "ConsultaUsuarios";
+                var urlApi = rutaServidor + "https://localhost:44337/ConsultaUsuarios";
                 var res = client.GetAsync(urlApi).Result;
                 return res.Content.ReadFromJsonAsync<List<UsuarioEnt>>().Result;
             }
@@ -77,7 +77,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "ConsultaUsuario?q=" + q;
+                var urlApi = rutaServidor + "https://localhost:44337/ConsultaUsuario?q=" + q;
                 var res = client.GetAsync(urlApi).Result;
                 return res.Content.ReadFromJsonAsync<UsuarioEnt>().Result;
             }
@@ -87,7 +87,7 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "ActualizarCuenta";
+                var urlApi = rutaServidor + "https://localhost:44337/ActualizarCuenta";
                 var jsonData = JsonContent.Create(entidad);
                 var res = client.PutAsync(urlApi, jsonData).Result;
                 return res.Content.ReadFromJsonAsync<string>().Result;
@@ -98,12 +98,12 @@ namespace WebKN.Models
         {
             using (var client = new HttpClient())
             {
-                var urlApi = rutaServidor + "ActualizarEstadoUsuario";
+                var urlApi = rutaServidor + "https://localhost:44337/ActualizarEstadoUsuario";
                 var jsonData = JsonContent.Create(entidad);
                 var res = client.PutAsync(urlApi, jsonData).Result;
                 return res.Content.ReadFromJsonAsync<string>().Result;
             }
-        }       
+        }
 
     }
 }
