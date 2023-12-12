@@ -13,7 +13,7 @@ namespace APIKN.Entities
         public void EnviarCorreo(string destino, string asunto, string contenido)
         {
             MailMessage message = new MailMessage();
-            message.From = new MailAddress(ConfigurationManager.AppSettings["kenneth1311@hotmail.es"]);
+            message.From = new MailAddress(ConfigurationManager.AppSettings["CorreoServicio"]);
             message.To.Add(new MailAddress(destino));
             message.Subject = asunto;
             message.Body = contenido;
@@ -21,7 +21,7 @@ namespace APIKN.Entities
             message.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient("smtp.office365.com", 587);
-            client.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["kenneth1311@hotmail.es"], ConfigurationManager.AppSettings["KennethG22"]);
+            client.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["CorreoServicio"], ConfigurationManager.AppSettings["passCorreoServicio"]);
             client.EnableSsl = true;
             client.Send(message);
         }

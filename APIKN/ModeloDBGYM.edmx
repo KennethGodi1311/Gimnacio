@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBGYMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBGYMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TCarrito">
           <Key>
             <PropertyRef Name="ConCarrito" />
@@ -232,8 +232,7 @@
             <End Role="TUsuario" EntitySet="TUsuario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBGYMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -459,17 +458,17 @@
             <Parameter Name="ConUsuario" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="ActualizarEstadoUsuarioSP">
-            <Parameter Name="ConUsuario" Mode="In" Type="Int64" />
+          <Parameter Name="ConUsuario" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="IniciarSesionSP" ReturnType="Collection(DBGYMModel.IniciarSesionSP_Result)">
             <Parameter Name="Correo" Mode="In" Type="String" />
             <Parameter Name="Contrasenna" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="PagarCarrito" ReturnType="Collection(String)">
-            <Parameter Name="ConUsuario" Mode="In" Type="Int64" />
+          <Parameter Name="ConUsuario" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="RecuperarCuentaSP" ReturnType="Collection(DBGYMModel.RecuperarCuentaSP_Result)">
-            <Parameter Name="Identificacion" Mode="In" Type="String" />
+          <Parameter Name="Identificacion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="RegistrarCuentaSP">
             <Parameter Name="Identificacion" Mode="In" Type="String" />

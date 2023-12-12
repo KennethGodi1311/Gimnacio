@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="~/Template/fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="~/Template/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Template/css/principal.css">
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="~/Template/css/style.css">
@@ -204,7 +205,7 @@
 
             @*PANEL PRINCIPAL*@
         <div class="main-panel" style="width:100%">
-            <div class="content-wrapper">
+            <div id="contenedor-prinipal" class="content-wrapper">
                 <div class="row">
                     <div class="col-md-12 grid-margin">
                         @RenderBody()
@@ -242,16 +243,16 @@
                                     <span class="text-white">10110 Parque central,San Jose, Costa Rica</span>
                                 </li>
                                 <li class="d-block"><span class="d-block">Telefono:</span><span class="text-white">+506 22785634</span></li>
-                                <li class="d-block"><span class="d-block">Correo electronico:</span><span class="text-white">FitnezzContac@hotmail.com</span></li>
+                                <li class="d-block"><span class="d-block">Correo electronico:</span><span class="text-white">GYMContac@hotmail.com</span></li>
                             </ul>
                         </div>
                         <div class="col-md-3 mb-5">
                             <h3>enlaces Rapidos</h3>
                             <ul class="enlace de pie de página sin estilo de lista">
-                                <li><a href="#">Acerca de</a></li>
-                                <li><a href="#">Condiciones de uso</a></li>
-                                <li><a href="#">Descargos de responsabilidad</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="@Url.Action("Acerca","login")">Acerca de</a>
+                                <li><a href="@Url.Action("RegistrarCuenta","Login")">Registrarse</a>
+                                <li><a href="@Url.Action("SeccionesPersonalizadas","")">Secciones</a>
+                                <li><a href="@Url.Action("Comentario","login")">Comentarios</a>
                             </ul>
                         </div>
                         <div class="col-md-3">

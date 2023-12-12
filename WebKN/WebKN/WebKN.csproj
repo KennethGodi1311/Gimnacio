@@ -187,6 +187,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\hero-1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="FuncionesSite\ConsultaNombres.js" />
     <Content Include="Global.asax" />
@@ -212,6 +213,7 @@
     <Content Include="Template\css\bootstrap.css" />
     <Content Include="Template\css\magnific-popup.css" />
     <Content Include="Template\css\owl.carousel.min.css" />
+    <Content Include="Template\css\principal.css" />
     <Content Include="Template\css\style.css" />
     <Content Include="Template\css\vertical-layout-light\style.css" />
     <Content Include="Template\faces\face1.jpg" />
@@ -248,6 +250,7 @@
     <Content Include="Template\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="Template\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Template\img\about-us.jpg" />
+    <Content Include="Template\img\apckentre2.jpg" />
     <Content Include="Template\img\banner-bg.jpg" />
     <Content Include="Template\img\big_img_1.jpg" />
     <Content Include="Template\img\big_img_2.jpg" />
@@ -282,11 +285,16 @@
     <Content Include="Template\img\latest-4.jpg" />
     <Content Include="Template\img\latest-5.jpg" />
     <Content Include="Template\img\logo.png" />
+    <Content Include="Template\img\packentre.jpg" />
+    <Content Include="Template\img\pelota.jpg" />
     <Content Include="Template\img\person_1.jpg" />
     <Content Include="Template\img\person_2.jpg" />
     <Content Include="Template\img\person_3.jpg" />
     <Content Include="Template\img\pesas1.jpeg" />
+    <Content Include="Template\img\playera.jpg" />
+    <Content Include="Template\img\rueda.jpg" />
     <Content Include="Template\img\services-1.jpg" />
+    <Content Include="Template\img\short.jpg" />
     <Content Include="Template\img\sidebar-banner.jpg" />
     <Content Include="Template\img\slider-1.jpg" />
     <Content Include="Template\img\slider-2.jpg" />

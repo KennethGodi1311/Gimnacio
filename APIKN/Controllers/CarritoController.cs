@@ -104,7 +104,7 @@ namespace APIKN.Controllers
         {
             using (var context = new DBGYMEntities())
             {
-                return context.PagarCarrito(tCarrito.ConUsuario);
+                return int.Parse(context.PagarCarrito(tCarrito.ConUsuario).ToString());
             }
         }
 
